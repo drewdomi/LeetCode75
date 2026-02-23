@@ -1,0 +1,24 @@
+{
+  "name": "LeetCode-75",
+  "build": {
+    "dockerfile": "Containerfile.dev",
+    "context": ".",
+    "args": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools-extension-pack",
+        "DavidAnson.vscode-markdownlint",
+        "streetsidesoftware.code-spell-checker",
+        "EditorConfig.EditorConfig",
+        "oderwat.indent-rainbow"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "runArgs": ["--network=host"],
+  "mounts": [
+    "type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,readonly"
+  ]
+}
